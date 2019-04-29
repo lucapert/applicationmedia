@@ -48,7 +48,7 @@
                 
             //l'autenticazione è fallita quindi rimando errore 1
             }else{
-                    header("Location:Login.php?errore=1");//posizioniamo un errore
+                    header("Location:../index.php?errore=1");//posizioniamo un errore
                                                                 //dovuto alla non
                                                                 //autenticazione
                                                                 //che verrà gestito  
@@ -95,7 +95,7 @@
                 if(($risultato_utenti !== null) || (!$_SESSION['risultato']))
                 {
                     db_close_conn($conn);
-                    header("Location:Login.php?errore=2");
+                    header("Location:../index.php?errore=2");
                     exit();
                 } 
                 
@@ -221,7 +221,7 @@
                                             $_SESSION['facebook_id_ok']=true;
                                             db_close_conn($conn);
                                             unset($_SESSION['facebook']);
-                                            header('Location:../Home/Home.php');
+                                            header('Location:../index.php');
                                         }
                                         
                                     } catch (\Facebook\Exceptions\FacebookResponseException $e) {
@@ -339,7 +339,7 @@
             }else{
                 db_close_conn($conn);
                 //rimando errore se non è stata spuntato nessun social di interesse
-                header("Location:Login.php?errore=3");
+                header("Location:../index.php?errore=3");
             }
         }
     }
