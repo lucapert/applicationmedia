@@ -87,7 +87,7 @@
                 }
                 
                 //ricerco che la mail non sia stata già utilizzata
-                db_select("localhost", "root", "", "socialmediadata");                   
+                db_select("uf63wl4z2daq9dbb.chr7pe7iynqr.eu-west-1.rds.amazonaws.com", "etr617dmc399m7su", "yci3nnpsmy60fs4e", "pds13s1nv3nye63z");                   
                 $query = "select email from tb_clienti where email = '".$_SESSION['email']."'";
                 $risultato_utenti = mysqli_fetch_assoc(query($query));
                 

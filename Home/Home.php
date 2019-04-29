@@ -6,7 +6,7 @@ use Facebook\Facebook;
 
 session_start();
 
-db_select("localhost", "root", "", "socialmediadata");
+db_select("uf63wl4z2daq9dbb.chr7pe7iynqr.eu-west-1.rds.amazonaws.com", "etr617dmc399m7su", "yci3nnpsmy60fs4e", "pds13s1nv3nye63z");  
 
 //eleboro i dati che sono stati inseriti nella registrazione e li inserisco nel db
 //verifico che siano stati settati almeno uno dei tre social, che non sia stato premuto il bottone accedi
