@@ -44,7 +44,7 @@
             if($autenticato_utente){
                 $id_utente = mysqli_fetch_assoc(query($query));
                 db_close_conn($conn);    
-                header("Location:./Home/Home.php");
+                header("Location:../Home/Home.php");
                 
             //l'autenticazione è fallita quindi rimando errore 1
             }else{
