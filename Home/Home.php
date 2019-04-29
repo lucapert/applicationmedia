@@ -198,22 +198,6 @@ $_SESSION['userID'] = getUserID($_SESSION['email']);
                     ?>
                     </ul>
                 </div>
-                    
-                    <?php
-                        //se ho premuto il pulsante reaload ricarico gli ultimi post di tutti i social
-                        if(isset($_POST['reload'])){
-                            $ch = curl_init();
-                            // imposto la URL della risorsa remota da scaricare
-                            curl_setopt($ch, CURLOPT_URL, 'https://socialmediadata.herokuapp.com/');
-                            // imposto che non vengano scaricati gli header
-                            curl_setopt($ch, CURLOPT_HEADER, 0);
-                            // eseguo la chiamata
-                            $return= html_entity_decode(curl_exec($ch), $assoc = TRUE);
-                            print_r($return['entry']['time']);
-                            // chiudo cURL
-                            curl_close($ch);
-                        }
-                    ?>
             </body>
         </html>
 
