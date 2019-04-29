@@ -31,7 +31,7 @@
                 </ul>
             </div>
             <div style="margin-left: 8%; margin-right: 8%; margin-top: 1.5%">
-                <form name = "login" action = "/LoginRegistrazione/elogin.php" method = "POST">
+                <form name = "login" action = "" method = "POST">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                         <input type="email" id="email" type="text" class="form-control" name="email" placeholder="Email">
