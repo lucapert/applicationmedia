@@ -176,7 +176,7 @@ $_SESSION['userID'] = getUserID($_SESSION['email']);
                     ?>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4 class="timeline-title"><?php$ ?></h4>
+                                    <h4 class="timeline-title">Time-Line</h4>
                                     <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> <?php print $riga['date_time'] ?></small></p>
                                 </div>
                                 <!-- la proprietà word-wrap consente di spezzare le parole ed andare a capo quando occorre -->

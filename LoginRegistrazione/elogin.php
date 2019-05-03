@@ -72,27 +72,14 @@
             if(isset($_SESSION['facebook']) || isset($_POST['facebook'])|| 
                isset($_SESSION['twitter']) || isset($_POST['twitter'])){
                 //TODO:aggiungere instagram
-                
-                //al primo accesso alla pagina verifico l'esistenza della mail inserita
-                if(isset($_POST['facebook']) || isset($_POST['twitter'])){
-                    //TODO:aggiungere instagram
-                    
-                    //utilizzo il protocollo smtp per verificare l'esistenza della mail inserita
-                    $sender = 'link89luca@gmail.com';
-                    $SMTP_Validator = new SMTP_validateEmail();
-                    //$SMTP_Validator->debug = true;-->debug true viene mostrata la serie di richieste/risposte
-                    $SMTP_Validator->debug = false;
-                    $results = $SMTP_Validator->validate(array($_SESSION['email']), $sender);
-                    $_SESSION['risultato'] = $results[$_SESSION['email']];
-                }
-                
+                               
                 //ricerco che la mail non sia stata già utilizzata
                 db_select("uf63wl4z2daq9dbb.chr7pe7iynqr.eu-west-1.rds.amazonaws.com", "etr617dmc399m7su", "yci3nnpsmy60fs4e", "pds13s1nv3nye63z");                   
                 $query = "select email from tb_clienti where email = '".$_SESSION['email']."'";
                 $risultato_utenti = mysqli_fetch_assoc(query($query));
                 
                 //se la mail è già stata utilizzata o la mail non esiste rimando errore
-                if(($risultato_utenti !== null) || (!$_SESSION['risultato']))
+                if(($risultato_utenti !== null))
                 {
                     db_close_conn($conn);
                     header("Location:../index.php?errore=2");
