@@ -76,12 +76,11 @@
                 $query = "select email from tb_clienti where email = '".$_SESSION['email']."'";
                 $risultato_utenti = mysqli_fetch_assoc(query($query));
                 
-                //se la mail è già stata utilizzata o la mail non esiste rimando errore
+                //se la mail è già stata utilizzata
                 if(($risultato_utenti !== null))
                 {
                     db_close_conn($conn);
                     header("Location:../index.php?errore=2");
-                    exit();
                 } 
                 
                 else{
@@ -154,7 +153,7 @@
                                     </li>
                                 </ul>
                             <?php
-                                echo"<a href='{$fb->getRedirectLoginHelper()->getLoginUrl("http://localhost/Social_Media_App/LoginRegistrazione/elogin.php")}'><img id='btn_image' src='../content/login_fb_button.png' width=200 class='hoverable' style='position:absolute; margin-left:10%'></a></div>";
+                                echo"<a href='{$fb->getRedirectLoginHelper()->getLoginUrl("https://applicationmedia.herokuapp.com/LoginRegistrazione/elogin.php")}'><img id='btn_image' src='../content/login_fb_button.png' width=200 class='hoverable' style='position:absolute; margin-left:10%'></a></div>";
                                 //ottengo il token di accesso
                                 $access_token = $fb->getRedirectLoginHelper()->getAccessToken();
 
