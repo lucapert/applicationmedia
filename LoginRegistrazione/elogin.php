@@ -1,6 +1,5 @@
 <?php
     require '../database_query/db_conn_query.php';
-    require '../php-smtp-email-validation/mail/smtp_validateEmail.class.php';
     require ("../vendor/autoload.php");
     require_once('../vendor/j7mbo/twitter-api-php/TwitterAPIExchange.php');
     use Facebook\Facebook;
