@@ -42,7 +42,7 @@
             //l'autenticazione è andata a buon fine
             if($autenticato_utente){
                 db_close_conn($conn);    
-                header("Location:/Home/Home.php");
+                header("Location:../Home/Home.php");
                 
             //l'autenticazione è fallita quindi rimando errore 1
             }else{
@@ -193,7 +193,7 @@
                                             //ho l'id di twitter
                                             if(isset($_SESSION['twitter_id_ok'])){
                                                 $_SESSION['facebook_id_ok']=true;
-                                                header('Location:/Home/Home.php');
+                                                header('Location:../Home/Home.php');
                                             //altrimenti significa che ancora non mi sono loggato su twitter quindi rimango sulla pagina
                                             }else{
                                                 $_SESSION['facebook_id_ok']=true;
@@ -291,7 +291,7 @@
                                                 $_SESSION['twitter_id_ok']=true;
                                                 echo"<script>
                                                     document.getElementById('twit_connection').style.display='none';
-                                                     location.href = '/Home/Home.php';
+                                                     location.href = '../Home/Home.php';
                                                 </script>";
                                                 unset($_SESSION['twitter']);
                                             }else{
@@ -310,7 +310,7 @@
                                             unset($_SESSION['facebook']);
                                             echo"<script>
                                                 document.getElementById('twit_connection').style.display='none';
-                                                location.href = '/Home/Home.php';
+                                                location.href = '../Home/Home.php';
                                             </script>";
                                         }
                                 ?>
