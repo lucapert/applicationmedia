@@ -42,7 +42,6 @@
             
             //l'autenticazione è andata a buon fine
             if($autenticato_utente){
-                $id_utente = mysqli_fetch_assoc(query($query));
                 db_close_conn($conn);    
                 header("Location:Home/Home.php");
                 
